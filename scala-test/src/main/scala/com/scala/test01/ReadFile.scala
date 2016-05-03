@@ -15,17 +15,16 @@ object ReadFile {
       )
 
       val maxWidth = widthOfLength(longestLine)
-      
-      for(line <- lines){
+      lines.foreach { line =>  
         val numSpace = maxWidth - widthOfLength(line)
-        val padding = ' ' * numSpace
-        println(padding + line.length + " | " + line)
+        val padding = " " * numSpace
+        println(padding + line.length + " | " + line)  
       }
     }
   }
   
   def main(args: Array[String]): Unit = {
-    val array = Array("D:\\work\\scalaspace\\scala-test\\src\\main\\scala\\com\\scala\\test01\\ReadFile.scala")
+    val array = Array("D:\\ReadFile.scala")
     readFileByLine(array);
   }
 }
